@@ -1,14 +1,14 @@
-<?php //Info
+<?php
 /**
  * @package Where I Was, Where I Will Be
- * @version 1.0
+ * @version 1.0.1
  */
 /*
 Plugin Name: Where I Was, Where I Will Be
 Plugin URI: http://wordpress.org/plugins/wiwwiwb/
 Description: A Plugin that use Google Maps to show where you was and where you will be! Seriously! :)
 Author: Mauro Baptista
-Version: 1.0
+Version: 1.0.1
 Author URI: http://carnou.com/
 License: GPL2
 
@@ -79,11 +79,11 @@ if (is_admin()) {
     
     // Call Admin Functions and Screens
 	include_once (WIW_DIR_CONTROL.'admin.php');
-    $admin = new WIWWIWB_Admin();
+    $wiwwiwb_admin = new WIWWIWB_Admin();
 
     //Activate and Deactivate Plugin
-    register_activation_hook(__FILE__, array($admin,'wiw_activate'));
-    register_deactivation_hook(__FILE__, array($admin,'wiw_deactivate'));
+    register_activation_hook(__FILE__, array($wiwwiwb_admin,'wiw_activate'));
+    register_deactivation_hook(__FILE__, array($wiwwiwb_admin,'wiw_deactivate'));
     
 } else {
     //Add Scripts and Styles to User View
@@ -92,6 +92,6 @@ if (is_admin()) {
     
 	// Call User Functions and Screens
 	include_once (WIW_DIR_CONTROL.'user.php');
-    $user = new WIWWIWB_User();
+    $wiwwiwb_user = new WIWWIWB_User();
 }
 ?>

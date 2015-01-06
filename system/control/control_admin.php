@@ -132,7 +132,7 @@ class WIWWIWB_Admin {
     }
     
     function add_wiw_plugin( $plugin_array ) {
-       $plugin_array['wiwwiwb'] = WIW_DIR_JS . 'call_plugin.js';
+       $plugin_array['wiwwiwb'] = WIW_DIR_JS . 'call_plugin.min.js';
        return $plugin_array;
     }
     
@@ -157,7 +157,7 @@ class WIWWIWB_Admin {
         $domain = WIW_TRANSLATE;
         $mo_file = WIW_DIR . 'language/'. get_locale() . '.mo';
      
-        //load_textdomain( $domain, $mo_file ); 
+        load_textdomain( $domain, $mo_file ); 
         load_plugin_textdomain( $domain, false, $mo_file = WIW_DIR . 'language/'); 
     }
 
