@@ -1,39 +1,45 @@
-WIWWIWB
-=======
+=== Plugin Name ===
+Contributors: mcnardelli
+Tags: maps, google maps, places, travel
+Requires at least: 4.0
+Tested up to: 4.1
+Stable tag: trunk
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Where I Was, Where I Will Be [WP Plugin]
+A Plugin that use Google Maps to show where you was and where you will be! Although you can use it to show anything in a map!
 
-A Simple WP Plugin using Google Maps Api to show the places where you went!
+== Description ==
 
-|Attribute	            | Type      	        | Value if not set	    | Description           |
-| :-------------------- | :-------------------- | :-------------------: | :-------------------- |
-|start_date	            | Date (MM/DD/YYYY)	    | {EMPTY}		        | Show local that you visited since this date. |
-|end_date	            | Date (MM/DD/YYYY)	    | {EMPTY}		        | Show local that you visit until this date. |
-|only_until_today	    | True / False	        | False		            | Show local that you have visited until today. (if set as True, it will ignore the value in _end_date_) |
-|type	                | Choose from a list	|                       | All itens	Show only selected types. |
-|local	                | Choose from a list	|                       | All Itens	Show only selected locals. (if set, it will ignore the value in _type_ field.) |
-|show_no_arrival	    | True / False	        | False		            | Show local if Start Date wasn’t set. |
-|class	                | Text	                |	{EMPTY}		        | Map div class |
-|width	                | Text	                |	100%		        | Map width |
-|height	                | Text	                |	400px		        | Map height |
-|map_id	                | Text	                |   map_{aleatory text)	| Map Id |
-|zoom	                | Select	            |	AUTO	            | Initial zoom. If set as AUTO, it will show all locals (if there is only one local, it will show it with zoom = 10. If set as a number and there are more than on local, it will be ignored, except if you mark _force zoom_)
-|force_zoom	            | True / False	        | False	                | Force zoom when zoom isn’t set as AUTO. _See zoom description._ |
-|map_type	            | Select	            |	Road Map	        | Type of map |
-|zoom_control	        | Select	            |	Disabled	        | Show zoom control on map. |
-|zoom_position	        | Select	            |	TOP_LEFT	        | Position of zoom control on map. Field _zoom_control_ must be enabled. |
-|control_style	        | Select	            |	Disabled	        | Style of control on map (manual zoom). |
-|control_position	    | Select	            |	TOP_RIGHT	        | Position of control on map. Field _control_style_ must be enabled. |
-|pan_control	        | Select	            |	Disabled	        | Show pan control on map (shown area). |
-|pan_position	        | Select	            |	TOP_LEFT	        | Position of Pan position. Field _pan_control_ must be enabled. |
-|scale_control	        | Select	            |	Disabled	        | Show scale. |
-|streetview_control	    | Select	            |	Disabled	        | Show street view button on map. |
-|streetview_position	| Select	            |	TOP_LEFT	        | Position of street view button on map. Field _streetview_control_ must be enabled. |
-|center_button	        | Select	            |   Enabled	            | Show a button to show all local on map. |
-|center_button_position	| Select	            |   BOTTOM_CENTER       | Position of Center Button. Field _center_button_ must be enabled. |
+With this plugin you have freedom to show places using Google Maps Api.
 
-More about _Control Position_ on Google Maps: https://developers.google.com/maps/documentation/javascript/controls#ControlPositioning
+You have a lot of place registered, but just one to show one? It is easy!
+You want to show more than one map in a page? No Problem!
+You want to use custom pin to show your places? Just upload it!
 
-More about _Map Types_ on Google Maps: https://developers.google.com/maps/documentation/javascript/maptypes#BasicMapTypes
+You can show place for time (when you arrived at the place and when you left ). You can plan you travel ahead, but show only up to the current day.
 
-Site: https://github.com/mcnardelli/WIWWIWB
+== Installation ==
+
+1. Upload all files to the `/wp-content/plugins/` directory
+1. Activate the Where I Was, Where I Will be plugin through the 'Plugins' menu in WordPress
+1. Insert new locals
+1. Have fun
+
+== Screenshots ==
+
+1. Inserting a New Local
+2. Select the right place. The pin is draggable
+3. How it will show in your site (each color is a different type)
+4. Insert a picture at the local
+5. Use this plugin to insert a single place on the map
+6. It's fully customizable, and easy to create the shortcode
+7. You also can change how the map will be displayed
+
+== Changelog ==
+
+= 1.0.1 =
+* Change name of some variable to avoid conflict with themes and other plugins
+
+= 1.0 =
+* First Release
