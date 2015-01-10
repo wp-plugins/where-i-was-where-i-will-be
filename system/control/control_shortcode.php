@@ -137,7 +137,7 @@ class WIWWIWB_Shortcode {
             $compliment .= (empty($compliment))?'?':'&';
             $compliment .= $i .'='. urlencode($v);
         }
-        $url = plugins_url('wiwwiwb/system/view/user/show_map.php').$compliment;
+        $url = plugins_url('where-i-was-where-i-will-be/system/view/user/show_map.php').$compliment;
         $content = wp_remote_get($url);
         return $content['body'];
     }
