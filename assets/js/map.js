@@ -39,13 +39,13 @@ function code_address(map, id, geocoder, get_info) {
 }
 
 function show_flag(div, flag, style) {
-    jQuery('#'+div).html('<img src="'+WIW_DIR_IMAGES+'/flags/' + flag + '.png" class="' + style + '" onerror="imgError(this);">');
+    jQuery('#'+div).html('<img src="'+wiw_vars.wiw_dir_images+'/flags/' + flag + '.png" class="' + style + '" onerror="imgError(this);">');
 }
 
 //Show info on Form
 function show_marker_info(id, marker, get_info, error_msg) {
-    var lat = marker.position.k;
-    var lng = marker.position.D;
+    var lat = marker.position.A;
+    var lng = marker.position.F;
     var latlng = new google.maps.LatLng(lat, lng);
     get_info.geocode({'latLng': latlng}, function (results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
