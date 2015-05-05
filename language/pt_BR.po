@@ -1,0 +1,634 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: wiwwiwb\n"
+"POT-Creation-Date: 2014-12-27 06:07-0800\n"
+"PO-Revision-Date: 2014-12-27 06:07-0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.1\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../system/control/control_admin.php:17
+msgid "Locals"
+msgstr "Locais"
+
+#: ../system/control/control_admin.php:17
+#: ../system/view/admin/edit_local.php:8 ../system/view/admin/new_local.php:8
+msgid "Manage Locals"
+msgstr "Gerenciar Locais"
+
+#: ../system/control/control_admin.php:18
+#: ../system/view/admin/edit_local.php:92
+msgid "Edit Local"
+msgstr "Editar Local"
+
+#: ../system/control/control_admin.php:18
+msgid "Edit Locals"
+msgstr "Editar Locais"
+
+#: ../system/control/control_admin.php:19
+msgid "New Local"
+msgstr "Novo Local"
+
+#: ../system/control/control_admin.php:20
+#: ../system/control/control_manage.php:89
+#: ../system/view/admin/edit_local.php:85 ../system/view/admin/locals.php:13
+#: ../system/view/admin/new_local.php:65
+msgid "Type"
+msgstr "Tipo"
+
+#: ../system/control/control_admin.php:20
+msgid "Manage Types"
+msgstr "Gerenciar Tipos"
+
+#: ../system/control/control_admin.php:21
+msgid "Settings"
+msgstr "Configurações"
+
+#: ../system/control/control_ajax.php:27
+#: ../system/control/control_form.php:29
+#: ../system/view/admin/insert/page_post.php:30
+#: ../system/view/admin/insert/page_post.php:57
+#: ../system/view/admin/locals.php:10
+msgid "Id"
+msgstr "Id"
+
+#: ../system/control/control_ajax.php:28
+#: ../system/control/control_manage.php:22
+#: ../system/view/admin/insert/page_post.php:32
+#: ../system/view/admin/type.php:13
+msgid "Name"
+msgstr "Nome"
+
+#: ../system/control/control_ajax.php:29
+#: ../system/control/control_manage.php:23
+#: ../system/view/admin/insert/page_post.php:31
+#: ../system/view/admin/type.php:33
+msgid "Pin"
+msgstr "Pin"
+
+#: ../system/control/control_ajax.php:30
+#: ../system/control/control_ajax.php:59
+#: ../system/control/control_ajax.php:64 ../system/view/admin/locals.php:15
+#: ../system/view/admin/locals.php:41
+msgid "Action"
+msgstr "Ação"
+
+#: ../system/control/control_ajax.php:49 ../system/view/admin/type.php:38
+msgid "Upload Custom Pin"
+msgstr "Upload Custom Pin"
+
+#: ../system/control/control_ajax.php:55
+#: ../system/control/control_ajax.php:59 ../system/view/admin/locals.php:36
+msgid "Edit"
+msgstr "Editar"
+
+#: ../system/control/control_ajax.php:56
+#: ../system/control/control_ajax.php:64 ../system/view/admin/locals.php:37
+#: ../system/view/admin/locals.php:41
+msgid "Delete"
+msgstr "Deletar"
+
+#: ../system/control/control_ajax.php:60
+#: ../system/control/control_ajax.php:65 ../system/view/admin/locals.php:42
+msgid "Confirm"
+msgstr "Confirmar"
+
+#: ../system/control/control_ajax.php:61
+#: ../system/control/control_ajax.php:66
+#: ../system/view/admin/insert/page_post.php:237
+#: ../system/view/admin/locals.php:43
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: ../system/control/control_ajax.php:142
+msgid "Type successfully included!"
+msgstr "Tipo incluído com sucesso!"
+
+#: ../system/control/control_ajax.php:149
+msgid "Type successfully changed!"
+msgstr "Tipo editado com sucesso!"
+
+#: ../system/control/control_ajax.php:156
+msgid "Type successfully deleted!"
+msgstr "Tipo deletado com sucesso!"
+
+#: ../system/control/control_ajax.php:167
+#: ../system/view/admin/edit_local.php:74
+msgid "NO IMAGE"
+msgstr "SEM IMAGEM"
+
+#: ../system/control/control_ajax.php:172
+#: ../system/control/control_form.php:35
+#: ../system/control/control_manage.php:80
+#: ../system/control/control_manage.php:85
+#: ../system/view/admin/edit_local.php:58
+#: ../system/view/admin/new_local.php:38
+msgid "Arrival"
+msgstr "Chegada"
+
+#: ../system/control/control_ajax.php:174
+#: ../system/control/control_form.php:36
+#: ../system/control/control_manage.php:84
+#: ../system/view/admin/edit_local.php:60
+#: ../system/view/admin/new_local.php:40
+msgid "Departure"
+msgstr "Partida"
+
+#: ../system/control/control_ajax.php:179
+#: ../system/view/admin/edit_local.php:78
+#: ../system/view/admin/new_local.php:58
+msgid "Text"
+msgstr "Texto"
+
+#: ../system/control/control_ajax.php:186
+#: ../system/control/control_form.php:33
+#: ../system/control/control_manage.php:76
+#: ../system/view/admin/edit_local.php:43
+#: ../system/view/admin/new_local.php:32
+msgid "Latitude"
+msgstr "Latitude"
+
+#: ../system/control/control_ajax.php:187
+#: ../system/control/control_form.php:34
+#: ../system/control/control_manage.php:77
+#: ../system/view/admin/edit_local.php:45
+#: ../system/view/admin/new_local.php:34
+msgid "Longitude"
+msgstr "Longitude"
+
+#: ../system/control/control_ajax.php:209
+msgid "Local successfully included!"
+msgstr "Local incluído com sucesso!"
+
+#: ../system/control/control_ajax.php:216
+msgid "Local successfully  changed!"
+msgstr "Local editado com sucesso!"
+
+#: ../system/control/control_ajax.php:223
+msgid "Local successfully  deleted!"
+msgstr "Local deletado com sucesso!"
+
+#: ../system/control/control_form.php:30
+#: ../system/view/admin/edit_local.php:33
+#: ../system/view/admin/insert/page_post.php:58
+#: ../system/view/admin/locals.php:11 ../system/view/admin/new_local.php:22
+msgid "City"
+msgstr "Cidade"
+
+#: ../system/control/control_form.php:31
+#: ../system/control/control_manage.php:72
+#: ../system/view/admin/edit_local.php:37
+#: ../system/view/admin/insert/page_post.php:60
+#: ../system/view/admin/locals.php:12 ../system/view/admin/new_local.php:26
+msgid "Country"
+msgstr "País"
+
+#: ../system/control/control_form.php:32
+#: ../system/control/control_manage.php:75
+#: ../system/view/admin/edit_local.php:39
+#: ../system/view/admin/insert/page_post.php:59
+#: ../system/view/admin/new_local.php:28
+msgid "Flag"
+msgstr "Bandeira"
+
+#: ../system/control/control_form.php:37
+msgid "Days"
+msgstr "Dias"
+
+#: ../system/control/control_form.php:38
+msgid "Nigths"
+msgstr "Noites"
+
+#: ../system/control/control_form.php:39
+#: ../system/view/admin/edit_local.php:64 ../system/view/admin/locals.php:14
+#: ../system/view/admin/new_local.php:44
+msgid "Url"
+msgstr "Url"
+
+#: ../system/control/control_form.php:40
+#: ../system/view/admin/edit_local.php:68
+#: ../system/view/admin/new_local.php:48
+msgid "Image"
+msgstr "Imagem"
+
+#: ../system/control/control_form.php:47
+msgid "Insert"
+msgstr "Inserir"
+
+#: ../system/control/control_manage.php:22
+#: ../system/control/control_manage.php:23
+#, php-format
+msgid "[%s] must have more than 3 character"
+msgstr "[%s] deve ter mais de 3 caracteres"
+
+#: ../system/control/control_manage.php:34
+msgid "Error saving new Type!"
+msgstr "Falha ao salvar novo Tipo!"
+
+#: ../system/control/control_manage.php:45
+msgid "Error editing Type!"
+msgstr "Falha ao editar Tipo!"
+
+#: ../system/control/control_manage.php:53
+msgid "Error deleting Type!"
+msgstr "Falha ao deletar Tipo!"
+
+#: ../system/control/control_manage.php:72
+#, php-format
+msgid "[%s] is required"
+msgstr "[%s] é necessário"
+
+#: ../system/control/control_manage.php:75
+#, php-format
+msgid "[%s] must be 2 characters"
+msgstr "[%s] deve ter 2 caracteres"
+
+#: ../system/control/control_manage.php:76
+#: ../system/control/control_manage.php:77
+#, php-format
+msgid "[%s] must be a number"
+msgstr "[%s] deve ser um número"
+
+#: ../system/control/control_manage.php:80
+#: ../system/control/control_manage.php:84
+#, php-format
+msgid "[%s] must be a valid date"
+msgstr "[%s] deve ser uma data válida"
+
+#: ../system/control/control_manage.php:85
+#, php-format
+msgid "[%s] must be set"
+msgstr "[%s] deve ser definido"
+
+#: ../system/control/control_manage.php:89
+#, php-format
+msgid "[%s] invalid"
+msgstr "[%s] inválido"
+
+#: ../system/control/control_manage.php:101
+msgid "Error saving new Local!"
+msgstr "Falha ao salvar novo Local!"
+
+#: ../system/control/control_manage.php:112
+msgid "Error editing Local!"
+msgstr "Falha ao editar Local!"
+
+#: ../system/control/control_manage.php:120
+msgid "Error deleting Local!"
+msgstr "Falha ao deletar Local!"
+
+#: ../system/model/model_create.php:53
+msgid "Undefined"
+msgstr ""
+
+#: ../system/view/admin/edit_local.php:7 ../system/view/admin/locals.php:6
+msgid "Add New Local"
+msgstr "Adicionar Novo Local"
+
+#: ../system/view/admin/edit_local.php:16
+msgid "Please select a Local on page <strong>Manage Locals</strong>"
+msgstr ""
+"Por favor, selecione um Local na página <strong>Gerenciar Locais</strong>"
+
+#: ../system/view/admin/edit_local.php:24
+#: ../system/view/admin/new_local.php:13
+msgid "Get Info from Google"
+msgstr "Buscar dados do Google"
+
+#: ../system/view/admin/edit_local.php:26
+#: ../system/view/admin/new_local.php:15
+msgid "Get"
+msgstr "Buscar"
+
+#: ../system/view/admin/edit_local.php:39
+#: ../system/view/admin/new_local.php:28
+msgid "Use ISO3166-1 alpha-2"
+msgstr "Use ISO3166-1 alpha-2"
+
+#: ../system/view/admin/edit_local.php:70
+#: ../system/view/admin/new_local.php:50
+msgid "Upload Image"
+msgstr "Upload Imagem"
+
+#: ../system/view/admin/edit_local.php:73
+#: ../system/view/admin/new_local.php:53
+msgid "Preview Image"
+msgstr "Preview Imagem"
+
+#: ../system/view/admin/edit_local.php:80
+#: ../system/view/admin/new_local.php:60
+msgid "Load Standard Text"
+msgstr "Carregar Texto Padrão"
+
+#: ../system/view/admin/insert/page_post.php:7
+msgid "Where I Was, Where I Wil Be"
+msgstr "Where I Was, Where I Will Be"
+
+#: ../system/view/admin/insert/page_post.php:7
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: ../system/view/admin/insert/page_post.php:11
+msgid "Start Date"
+msgstr "Data Início"
+
+#: ../system/view/admin/insert/page_post.php:15
+msgid "End Date"
+msgstr "Data Fim"
+
+#: ../system/view/admin/insert/page_post.php:20
+msgid "Show only until current date"
+msgstr "Mostrar até a data corrente"
+
+#: ../system/view/admin/insert/page_post.php:20
+msgid "if checked it will ignore the End Date"
+msgstr "Se marcado, a data fim será ignorada"
+
+#: ../system/view/admin/insert/page_post.php:23
+msgid "Show places without arrival date"
+msgstr "Mostrar locais sem data de chegada"
+
+#: ../system/view/admin/insert/page_post.php:23
+msgid "if Start Date filled it will be ignored"
+msgstr "Se Data Início estiver preenchida, este será ignorado"
+
+#: ../system/view/admin/insert/page_post.php:25
+msgid "Choose Type"
+msgstr "Escolha o Tipo"
+
+#: ../system/view/admin/insert/page_post.php:50
+msgid "Choose Local"
+msgstr "Escolha o Local"
+
+#: ../system/view/admin/insert/page_post.php:53
+msgid ""
+"If you choose one or more locals, the type you have had choosed will be "
+"ignored on the map"
+msgstr ""
+"Se você escolher um ou mais locais, o tipo que você escolheu será ignorado"
+
+#: ../system/view/admin/insert/page_post.php:82
+msgid "Map Size [Width]"
+msgstr "Tamanho do Mapa [Largura]"
+
+#: ../system/view/admin/insert/page_post.php:86
+msgid "Map Size [Height]"
+msgstr "Tamanho do Mapa [Altura]"
+
+#: ../system/view/admin/insert/page_post.php:90
+msgid "Use px or %."
+msgstr "Use px ou %."
+
+#: ../system/view/admin/insert/page_post.php:90
+msgid "If none used, will be considered as px."
+msgstr "Se nenhum usado será considerado como px."
+
+#: ../system/view/admin/insert/page_post.php:95
+msgid "Class"
+msgstr "Classe"
+
+#: ../system/view/admin/insert/page_post.php:99
+msgid "Map Id"
+msgstr "Mapa Id"
+
+#: ../system/view/admin/insert/page_post.php:105
+msgid "Google Map Options"
+msgstr "Opções do Google Maps"
+
+#: ../system/view/admin/insert/page_post.php:113
+msgid "Zoom"
+msgstr "Zoom"
+
+#: ../system/view/admin/insert/page_post.php:115
+msgid "AUTO"
+msgstr "AUTO"
+
+#: ../system/view/admin/insert/page_post.php:122
+msgid "Force Zoom"
+msgstr "Forçar Zoom"
+
+#: ../system/view/admin/insert/page_post.php:125
+msgid ""
+"If you set a number as a Zoom value, it will only work if the map has only "
+"one markers."
+msgstr ""
+"Se você definir um número para Zoom, este somente funcionará se você tiver "
+"apenas um marcados no mapa."
+
+#: ../system/view/admin/insert/page_post.php:125
+msgid ""
+"Checking Force Zoom, it will show all markers, but focused on the last one."
+msgstr ""
+"Marcando Forçar Zoom, será mostrado todos os marcadores, porém com foco no "
+"último."
+
+#: ../system/view/admin/insert/page_post.php:131
+msgid "Map Type"
+msgstr "Tipo do Mapa"
+
+#: ../system/view/admin/insert/page_post.php:133
+msgid "Hybrid"
+msgstr "Hibrido"
+
+#: ../system/view/admin/insert/page_post.php:134
+msgid "Road Map"
+msgstr "Estrada"
+
+#: ../system/view/admin/insert/page_post.php:135
+msgid "Satellite"
+msgstr "Satélite"
+
+#: ../system/view/admin/insert/page_post.php:136
+msgid "Terrain"
+msgstr "Terreno"
+
+#: ../system/view/admin/insert/page_post.php:144
+msgid "See All Markers Button"
+msgstr "Botão Ver Todos Marcadores"
+
+#: ../system/view/admin/insert/page_post.php:146
+#: ../system/view/admin/insert/page_post.php:160
+#: ../system/view/admin/insert/page_post.php:174
+#: ../system/view/admin/insert/page_post.php:190
+#: ../system/view/admin/insert/page_post.php:206
+#: ../system/view/admin/insert/page_post.php:217
+msgid "Disabled"
+msgstr "Desabilitado"
+
+#: ../system/view/admin/insert/page_post.php:147
+#: ../system/view/admin/insert/page_post.php:161
+#: ../system/view/admin/insert/page_post.php:207
+#: ../system/view/admin/insert/page_post.php:218
+msgid "Enabled"
+msgstr "Habilitado"
+
+#: ../system/view/admin/insert/page_post.php:151
+msgid "See All Markers Button Position"
+msgstr "Ver Todos Marcadores Posição"
+
+#: ../system/view/admin/insert/page_post.php:158
+msgid "Pan Control"
+msgstr "Controle de Local"
+
+#: ../system/view/admin/insert/page_post.php:165
+msgid "Pan Position"
+msgstr "Posição"
+
+#: ../system/view/admin/insert/page_post.php:172
+msgid "Zoom Control"
+msgstr "Controle de Zoom"
+
+#: ../system/view/admin/insert/page_post.php:175
+#: ../system/view/admin/insert/page_post.php:191
+msgid "Default"
+msgstr "Padrão"
+
+#: ../system/view/admin/insert/page_post.php:176
+msgid "Small"
+msgstr "Pequeno"
+
+#: ../system/view/admin/insert/page_post.php:177
+msgid "Large"
+msgstr "Grande"
+
+#: ../system/view/admin/insert/page_post.php:181
+msgid "Zoom Position"
+msgstr "Posição"
+
+#: ../system/view/admin/insert/page_post.php:188
+msgid "Control Style"
+msgstr "Estilo do Controle"
+
+#: ../system/view/admin/insert/page_post.php:192
+msgid "Horizontal Bar"
+msgstr "Barra Horizontal"
+
+#: ../system/view/admin/insert/page_post.php:193
+msgid "Dropdown Menu"
+msgstr "Menu Dropdown"
+
+#: ../system/view/admin/insert/page_post.php:197
+msgid "Control Position"
+msgstr "Posição"
+
+#: ../system/view/admin/insert/page_post.php:204
+msgid "Scale Control"
+msgstr "Controle de Escala"
+
+#: ../system/view/admin/insert/page_post.php:210
+msgid "Scale Position"
+msgstr "Posição"
+
+#: ../system/view/admin/insert/page_post.php:210
+msgid "Fixed to BOTTOM_RIGHT"
+msgstr "Fixado em BOTTOM_RIGHT"
+
+#: ../system/view/admin/insert/page_post.php:215
+msgid "Street View Control"
+msgstr "Controle de Visão da Rua"
+
+#: ../system/view/admin/insert/page_post.php:222
+msgid "Street View Position"
+msgstr "Posição"
+
+#: ../system/view/admin/insert/page_post.php:236
+msgid "Insert Shortcode"
+msgstr "Inserir Shortcode"
+
+#: ../system/view/admin/locals.php:25
+msgid "See"
+msgstr "Ver"
+
+#: ../system/view/admin/locals.php:35
+msgid "More Info"
+msgstr "Mais Info"
+
+#: ../system/view/admin/new_local.php:71
+msgid "Insert New Local"
+msgstr "Inserir Novo Local"
+
+#: ../system/view/admin/setting.php:11
+msgid "Google API"
+msgstr "Google API"
+
+#: ../system/view/admin/setting.php:15
+msgid "Standard Type"
+msgstr "Tipo Padrão"
+
+#: ../system/view/admin/setting.php:22
+msgid "Standard Text"
+msgstr "Texto Padrão"
+
+#: ../system/view/admin/setting.php:31
+msgid "Advanced Options"
+msgstr "Opções Avançadas"
+
+#: ../system/view/admin/setting.php:37
+msgid "DO NOT load Google Api from this plugin!"
+msgstr "NÃO carregar a Api do Google a partir deste plugin!"
+
+#: ../system/view/admin/setting.php:37
+msgid "Only mark it if you know what you are doing!"
+msgstr "Somente marque se você sabe o que está fazendo!"
+
+#: ../system/view/admin/setting.php:43
+msgid "Delete Locals and Types when deactivate WIWWIWB plugin!"
+msgstr "Deletar Locais e Tipos quando desativar o plugin WIWWIWB!"
+
+#: ../system/view/admin/setting.php:43
+msgid "It will also reset all settings!"
+msgstr "Isto também deletará todas as configurações!"
+
+#: ../system/view/admin/type.php:9
+msgid "Add New Type"
+msgstr "Adicionar Novo Tipo"
+
+#: ../system/view/admin/type.php:17
+msgid "Choose Pin"
+msgstr "Escolha o Pin:"
+
+#: ../system/view/admin/type.php:37
+msgid "Custom Pin"
+msgstr "Custom Pin"
+
+#: ../system/view/admin/type.php:43
+msgid "Where download pin?"
+msgstr "Onde encontrar outros Pins?"
+
+#: ../system/view/admin/type.php:54
+msgid "Insert New Pin"
+msgstr "Inserir Novo Pin"
+
+#: ../system/view/user/show_map.php:182
+msgid "Click to set the zoom to show all markers"
+msgstr "Clique para ver todos marcadores"
+
+#: ../system/view/user/show_map.php:191
+msgid "Show All Markers"
+msgstr "Mostrar todos marcadores"
+
+#: ../wiwwiwb.php:67
+msgid "Choose Image"
+msgstr "Escolher Imagem"
+
+#: ../wiwwiwb.php:68
+msgid "Loading"
+msgstr "Carregando"
+
+#: ../wiwwiwb.php:69
+msgid "Geocode was not successful for the following reason"
+msgstr "Ocorreu um erro com Geocode devido as seguintes razões"
+
+#~ msgid " successfully "
+#~ msgstr "com sucesso"
+
+#~ msgid "Arrivals"
+#~ msgstr "Chegadas"
