@@ -4,7 +4,7 @@ Plugin Name: Where I Was, Where I Will Be
 Plugin URI: http://wordpress.org/plugins/wiwwiwb/
 Description: A Plugin that use Google Maps to show where you was and where you will be! Seriously! :)
 Author: Mauro Baptista
-Version: 1.0.3
+Version: 1.0.4
 Author URI: http://carnou.com/
 License: GPL2
 

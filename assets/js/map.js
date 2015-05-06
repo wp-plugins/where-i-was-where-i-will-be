@@ -44,8 +44,16 @@ function show_flag(div, flag, style) {
 
 //Show info on Form
 function show_marker_info(id, marker, get_info, error_msg) {
-    var lat = marker.position.A;
-    var lng = marker.position.F;
+    latLng = [];
+    for(var index in marker.position) { 
+        if (marker.position.hasOwnProperty(index)) {
+            latLng.push(marker.position[index]);
+        }
+    }
+    
+    var lat = latLng[0];
+    var lng = latLng[1];
+    
     var latlng = new google.maps.LatLng(lat, lng);
     get_info.geocode({'latLng': latlng}, function (results, status) {
         if (status == google.maps.GeocoderStatus.OK) {

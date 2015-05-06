@@ -3,7 +3,7 @@ Contributors: mcnardelli
 Tags: maps, google maps, places, travel
 Requires at least: 4.0
 Tested up to: 4.1
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,10 @@ You can show place for time (when you arrived at the place and when you left ). 
 7. You also can change how the map will be displayed
 
 == Changelog ==
+= 1.0.4 =
+* Adjust loading info from Google Maps (Admin page)
+
+
 = 1.0.3 =
 * Adjust error when loading Flag (Admin page)
 * Adjust var when transfer info from Map to Form (Admin page)
