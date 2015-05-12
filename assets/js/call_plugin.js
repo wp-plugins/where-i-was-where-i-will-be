@@ -50,8 +50,11 @@ function wiw_insert_form() {
 
     var only_until_today = jQuery("#only_until_today").is(":checked");
     only_until_today = only_until_today ? " only_until_today=\"true\"" : "";
-    
+        
     if (only_until_today) end_date = '';
+
+    var cluster = jQuery("#cluster").is(":checked");
+    cluster = cluster ? " cluster=\"true\"" : "";
     
     var type = jQuery("#type").val();
     type = (type.length) ? " type=\"" + type + "\"" : "";
@@ -129,7 +132,7 @@ function wiw_insert_form() {
     
     var google_maps_att = width + height + map_type + zoom + zoom_control + control_style  + pan_control + scale_control + streetview_control;
  
-    window.send_to_editor("[wiwwiwb"+ center_button + start_date + end_date + only_until_today + type + local + style + map_id + google_maps_att + show_no_arrival + "]");
+    window.send_to_editor("[wiwwiwb"+ center_button + start_date + end_date + only_until_today + type + local + style + map_id + google_maps_att + show_no_arrival + cluster + "]");
     
     wiw_close_form ();
 }

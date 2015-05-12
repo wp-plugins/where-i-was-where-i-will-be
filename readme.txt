@@ -2,8 +2,8 @@
 Contributors: mcnardelli
 Tags: maps, google maps, places, travel
 Requires at least: 4.0
-Tested up to: 4.2.1
-Stable tag: 1.0.4
+Tested up to: 4.2.2
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,8 +35,14 @@ You can show place for time (when you arrived at the place and when you left ). 
 5. Use this plugin to insert a single place on the map
 6. It's fully customizable, and easy to create the shortcode
 7. You also can change how the map will be displayed
+8. Function Cluster Markers
 
 == Changelog ==
+= 1.0.5 =
+* Add option to cluster markers (Using: https://github.com/googlemaps/js-marker-clusterer)
+* Adjust minor issue when loading map
+* Removed not used javascript files 
+
 = 1.0.4 =
 * Adjust loading info from Google Maps (Admin page)
 

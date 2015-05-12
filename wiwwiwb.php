@@ -1,14 +1,15 @@
 <?php
 /*
 Plugin Name: Where I Was, Where I Will Be
-Plugin URI: http://wordpress.org/plugins/wiwwiwb/
+Plugin URI: http://wordpress.org/plugins/where-i-was-where-i-will-be/
 Description: A Plugin that use Google Maps to show where you was and where you will be! Seriously! :)
 Author: Mauro Baptista
-Version: 1.0.4
+Version: 1.0.5
 Author URI: http://carnou.com/
 License: GPL2
 
 Flags: https://github.com/hjnilsson/country-flags
+Marker Clusterer Library: https://github.com/googlemaps/js-marker-clusterer
 */
 if ( !function_exists( 'add_action' ) ) {
 	echo 'Hi there!  I\'m just a plugin, not much I can do when called directly.';
@@ -64,7 +65,11 @@ function wiw_scripts() {
                                                         'wiw_loading' => __('Loading', WIW_TRANSLATE),
                                                         'wiw_google_maps_error' => __('Geocode was not successful for the following reason',WIW_TRANSLATE)
                                                         ));
-    }
+    } else {
+		//Register Marker Clusterer (Only for User)
+		wp_register_script( 'wiw_cluster_script',WIW_DIR_JS.'markerclusterer.min.js'); //Marker Clusterer (for Google API)
+		wp_enqueue_script('wiw_cluster_script');
+	}
 }
 
 //Includes

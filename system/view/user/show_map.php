@@ -16,6 +16,12 @@
 <div id="<?php echo $map_id; ?>" <?php echo $class; ?> <?php echo $style; ?>></div>
 <style type="text/css">#<?php echo $map_id; ?> img {width: auto!important; max-width: none!important;}</style>
 <script type="text/javascript">
+        if (markerClusterer<?php echo $map_id; ?>) {markerClusterer<?php echo $map_id; ?>.clearMarkers();}
+        
+      //Start Marker Clusterer
+      var markerClusterer<?php echo $map_id; ?> = null;
+      var map = null;
+    
     // Define your locations: HTML content for the info window, latitude, longitude
     var locations = [
 <?php
@@ -136,6 +142,13 @@
         iconCounter++;
     }
     
+    <?php if ($cluster) { ?>
+    markerClusterer<?php echo $map_id; ?> = new MarkerClusterer(map, markers, {
+        maxZoom: <?php echo ($zoom == 'AUTO')?'10':$zoom; ?>,
+        gridSize: 40
+    });
+    
+    <?php } ?>
     <?php
         if ($center_button == 'ENABLED') {
     ?>

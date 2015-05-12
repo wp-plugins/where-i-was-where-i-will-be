@@ -132,7 +132,7 @@ class WIWWIWB_Admin {
     }
     
     function add_wiw_plugin( $plugin_array ) {
-       $plugin_array['wiwwiwb'] = WIW_DIR_JS . 'call_plugin.min.js';
+       $plugin_array['wiwwiwb'] = WIW_DIR_JS . 'call_plugin.js';
        return $plugin_array;
     }
     

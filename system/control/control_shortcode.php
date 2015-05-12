@@ -37,6 +37,7 @@ class WIWWIWB_Shortcode {
             'streetview_position'=> false,
             'center_button'=> 'ENABLED',
             'center_button_position' => 'BOTTOM_CENTER',
+			'cluster' => false
         ), $atts);
         
         //Attributes to Generate WHERE
@@ -48,11 +49,13 @@ class WIWWIWB_Shortcode {
         $info['locals'] = $this->explode_att($att['local']);
         $info['types'] = ($info['locals'] !== false)?false:$this->explode_att($att['type']);
         $sql_where = $this->generate_where($info);
+		
         
         //Attributes to be passed to show_map.php
         $width = $this->check_dimension($att['width']);
         $height = $this->check_dimension($att['height']);
-        
+        $cluster = (($att['cluster'] === false) || ($att['cluster']) === "false")?false:true;
+		
         $atts = array('class' => $att['class'],
                       'map_id' => $att['map_id'],
                       'zoom' => $att['zoom'],
@@ -70,7 +73,8 @@ class WIWWIWB_Shortcode {
                       'streetview_control' => $att['streetview_control'],
                       'streetview_position' => $att['streetview_position'],
                       'center_button' => $att['center_button'],
-                      'center_button_position' => $att['center_button_position']);
+                      'center_button_position' => $att['center_button_position'],
+					  'cluster' => $cluster);
         
         return $this->generate_map($sql_where, $atts);
     }
@@ -139,7 +143,7 @@ class WIWWIWB_Shortcode {
         }
         $url = plugins_url('where-i-was-where-i-will-be/system/view/user/show_map.php').$compliment;
         $content = wp_remote_get($url);
-        return $content['body'];
+        return (is_array($content))?$content['body']:false;
     }
     
     function replace_text($text, $info) {

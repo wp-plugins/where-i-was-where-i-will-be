@@ -22,6 +22,9 @@
             <div class="w100p">
                 <span class="wiw_label"><input type="checkbox" id="show_no_arrival" name="show_no_arrival"> <?php _e('Show places without arrival date'); ?></span>  <small> (<?php _e('if Start Date filled it will be ignored',WIW_TRANSLATE); ?>!)</small>
             </div>
+            <div class="w100p">
+                <span class="wiw_label"><input type="checkbox" id="cluster" name="cluster"> <?php _e('Cluster places?'); ?></span> <small> (<?php _e('Avoid too many markers in one place',WIW_TRANSLATE); ?>!)</small>
+            </div>
             <span class="wiw_label wiw_show_types"><span class="wiw_show_types_icon">+</span> <?php _e('Choose Type',WIW_TRANSLATE); ?></span><br>
             <div id="wiw_show_types_div" style="display: none;">
                 <table class="wiw_table">
