@@ -93,7 +93,16 @@
                 <small> <span class="wiw_label"><?php _e('Use px or %.',WIW_TRANSLATE); ?></span> (<?php _e('If none used, will be considered as px.',WIW_TRANSLATE); ?>!)</small>
                 </div>
             </div>
-            <div class="w100p">
+            <div class="w100p pull-left">
+                <div class="w100p pull-left">
+                    <span class="wiw_label"><?php _e('Show Coordinates',WIW_TRANSLATE); ?>:</span><br>
+                    <input type="text" id="show_coord" name="show_coord" value=""  class="w100p wiw_input_text"/>
+                </div>
+                <div class="w100p pull-left wiw_row_0">
+                <small> <span class="wiw_label"><?php _e('Options: "<strong>center</strong>" Same as lat 0 and lng 0. | "<strong>last</strong>" Set map on last local coordinate | "<strong>lat,lng</strong>" Choose your own coordinate (lat and lng must be numbers and separeted by a comma)',WIW_TRANSLATE); ?></span> (<?php _e('Do NOT include quote marks.',WIW_TRANSLATE); ?>!)</small>
+                </div>
+            </div>
+            <div class="w100p wiw_row_1">
                 <div class="w50p pull-left">
                     <span class="wiw_label"><?php _e('Class',WIW_TRANSLATE); ?>:</span><br>
                     <input type="text" id="class" name="class" value=""  class="w100p wiw_input_text"/>
@@ -224,6 +233,12 @@
                         <div class="w50p pull-right">
                             <span class="wiw_label"><?php _e('Street View Position',WIW_TRANSLATE); ?>:</span><br>
                             <?php echo $control_form->create_select('streetview_position','', $position,'TOP_LEFT'); ?>
+                        </div>
+                        <div class="wiw_space10"></div>
+                    </div>
+                    <div class="w100p pull-left wiw_row_2">
+                        <div class="w100p pull-left">
+                            <span class="wiw_label"><input type="checkbox" id="scroll" name="scroll" checked> <?php _e('Wheel Scroll'); ?></span> <small> (<?php _e('If not set, when user scroll on map it will move entire page',WIW_TRANSLATE); ?>!)</small>
                         </div>
                         <div class="wiw_space10"></div>
                     </div>

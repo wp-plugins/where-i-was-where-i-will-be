@@ -49,8 +49,9 @@ class WIWWIWB_Admin {
 	
 	function init_settings() {
     
-        $this->plugin_translate(); //Call Files to translate plugin
-    
+        //$this->plugin_translate(); 
+		add_action( 'init', array($this, 'plugin_translate')); //Call Files to translate plugin
+		
 		//Register Initial Settings
 		$settings = array('wiw_standard_type','wiw_standard_text','wiw_google_api','wiw_load_google_api','wiw_drop_table');
 		$section = array('wiw_settings',
@@ -154,11 +155,9 @@ class WIWWIWB_Admin {
     }
     
     function plugin_translate() {
-        $domain = WIW_TRANSLATE;
-        $mo_file = WIW_DIR . 'language/'. get_locale() . '.mo';
-     
-        load_textdomain( $domain, $mo_file ); 
-        load_plugin_textdomain( $domain, false, $mo_file = WIW_DIR . 'language/'); 
+		$domain = WIW_TRANSLATE;
+		load_textdomain( $domain, WIW_DIR . '/language' . '/'. $domain . '-' . get_locale() . '.mo' );
+        load_plugin_textdomain( $domain, false, WIW_DIR.'language/');
     }
 
 }

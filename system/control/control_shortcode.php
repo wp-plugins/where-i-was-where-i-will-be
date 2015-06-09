@@ -37,7 +37,9 @@ class WIWWIWB_Shortcode {
             'streetview_position'=> false,
             'center_button'=> 'ENABLED',
             'center_button_position' => 'BOTTOM_CENTER',
-			'cluster' => false
+			'cluster' => false,
+			'scroll' => true,
+			'show_coord' => ''
         ), $atts);
         
         //Attributes to Generate WHERE
@@ -55,7 +57,8 @@ class WIWWIWB_Shortcode {
         $width = $this->check_dimension($att['width']);
         $height = $this->check_dimension($att['height']);
         $cluster = (($att['cluster'] === false) || ($att['cluster']) === "false")?false:true;
-		
+		$scroll = (($att['scroll'] === true) || ($att['scroll']) === "true")?true:false;
+				
         $atts = array('class' => $att['class'],
                       'map_id' => $att['map_id'],
                       'zoom' => $att['zoom'],
@@ -74,7 +77,9 @@ class WIWWIWB_Shortcode {
                       'streetview_position' => $att['streetview_position'],
                       'center_button' => $att['center_button'],
                       'center_button_position' => $att['center_button_position'],
-					  'cluster' => $cluster);
+					  'cluster' => $cluster,
+					  'scroll' => $scroll,
+					  'show_coord' => $att['show_coord']);
         
         return $this->generate_map($sql_where, $atts);
     }

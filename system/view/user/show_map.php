@@ -42,15 +42,22 @@
         $pin = $model_info->get_type($local->type);
         echo "'{$pin[0]->pin}'".$comma.PHP_EOL;
     }
+    
+    //Define coordinate to start map with
+    if (strtolower($show_coord) == 'last') $coord = $local->latitude.','.$local->longitude;
+    else if (strtolower($show_coord) == 'center') $coord = '0,0';
+    else $coord = $show_coord;
 ?>    
     ];
     var icons_length = icons.length;
 
     var map = new google.maps.Map(document.getElementById('<?php echo $map_id; ?>'), {
         zoom: <?php echo ($zoom == 'AUTO')?'10':$zoom; ?>,
-        center: new google.maps.LatLng(<?php echo $local->latitude;?>, <?php echo $local->longitude; ?>),
+        center: new google.maps.LatLng(<?php echo $coord; ?>),
         mapTypeId: google.maps.MapTypeId.<?php echo $map_type; ?>,
-        
+        <?php if (!$scroll) { ?>
+            scrollwheel: false,
+        <?php } ?>
         <?php
             if ($control_style != 'DISABLED') {
         ?>
@@ -161,7 +168,7 @@
         }
     ?>
     <?php
-        if ((count($locals) > 1) && ($force_zoom == false)) {
+        if ((count($locals) > 1) && ($force_zoom == false) && (empty($show_coord))) {
     ?>
         AutoCenter();
     <?php

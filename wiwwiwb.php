@@ -1,10 +1,10 @@
 <?php
 /*
 Plugin Name: Where I Was, Where I Will Be
-Plugin URI: http://wordpress.org/plugins/where-i-was-where-i-will-be/
+Plugin URI: http://carnou.com/wiwwiwb/
 Description: A Plugin that use Google Maps to show where you was and where you will be! Seriously! :)
 Author: Mauro Baptista
-Version: 1.0.5
+Version: 1.0.6
 Author URI: http://carnou.com/
 License: GPL2
 
