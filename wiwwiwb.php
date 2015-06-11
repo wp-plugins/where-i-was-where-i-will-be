@@ -4,7 +4,7 @@ Plugin Name: Where I Was, Where I Will Be
 Plugin URI: http://carnou.com/wiwwiwb/
 Description: A Plugin that use Google Maps to show where you was and where you will be! Seriously! :)
 Author: Mauro Baptista
-Version: 1.0.6
+Version: 1.0.7
 Author URI: http://carnou.com/
 License: GPL2
 
@@ -95,4 +95,13 @@ if (is_admin()) {
 	include_once (WIW_DIR_CONTROL.'user.php');
     $wiwwiwb_user = new WIWWIWB_User();
 }
+
+
+//ONLY USED FOR DEBUG
+/*
+function save_error() {
+	update_option('plugin_error',  ob_get_contents());
+}
+add_action('activated_plugin','save_error');
+*/
 ?>

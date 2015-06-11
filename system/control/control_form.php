@@ -27,6 +27,7 @@ class WIWWIWB_Form {
     
     function insert_replaceable_text($name, $button, $class = '', $class_btn = '') {
         $values = array(array('id',__('Id',WIW_TRANSLATE)),
+                       array('title',__('Title',WIW_TRANSLATE)),
                        array('city',__('City',WIW_TRANSLATE)),
                        array('country',__('Country',WIW_TRANSLATE)),
                        array('flag',__('Flag',WIW_TRANSLATE)),

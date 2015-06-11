@@ -16,7 +16,10 @@ class WIWWIWB_Model_Create {
 
     function activate_create_locals_table () {		
 		$table_name = $this->table_prefix . "locals";
-		$sql = "CREATE TABLE IF NOT EXISTS {$table_name} (id INT NOT NULL AUTO_INCREMENT,
+		$charset_collate = $this->db->get_charset_collate();
+		$sql = "CREATE TABLE {$table_name} (
+										id INT NOT NULL AUTO_INCREMENT,
+										title TEXT NULL,
 										city VARCHAR(256) NULL,
 										country VARCHAR(256) NOT NULL,
                                         flag VARCHAR(8) NULL,
@@ -28,7 +31,8 @@ class WIWWIWB_Model_Create {
 										image VARCHAR(1024) NULL,
 										type INT NOT NULL,
 										text TEXT NULL,
-                                        PRIMARY KEY(id));";
+										UNIQUE KEY id (id)
+				) {$charset_collate};";
 		dbDelta($sql);
         
     }
@@ -50,7 +54,7 @@ class WIWWIWB_Model_Create {
     
     function populate_type() {
         //Insert Undefined
-        return $this->db->query('INSERT INTO '.$this->table_prefix.'type (id, name, pin) VALUES (1, "'.__('Undefined',WIW_TRANSLATE).'", "'.WIW_DIR_IMAGES.'pin/red-dot.png");');
+        return $this->db->query('INSERT IGNORE INTO '.$this->table_prefix.'type (id, name, pin) VALUES (1, "'.__('Undefined',WIW_TRANSLATE).'", "'.WIW_DIR_IMAGES.'pin/red-dot.png");');
     }
 /******************************************/
 //  END ACTIVATE - CREATE TABLES

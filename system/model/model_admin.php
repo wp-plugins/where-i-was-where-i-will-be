@@ -64,7 +64,7 @@ class WIWWIWB_Model_Admin {
         $arrival = (is_null($info['local_arrival']))?NULL:$this->control_util->change_date_to_db($info['local_arrival']);
         $departure = (is_null($info['local_departure']))?NULL:$this->control_util->change_date_to_db($info['local_departure']);  
     
-        $query = $this->db->query('INSERT INTO '.WIW_TABLE_PREFIX.'locals (id, city, country, flag, latitude, longitude, url, image, text, type, arrival, departure) VALUES (NULL,"'.$info['local_city'].'","'.$info['local_country'].'","'.$info['local_flag'].'","'.$info['local_latitude'].'","'.$info['local_longitude'].'","'.$info['local_url'].'","'.$info['local_image'].'","'.$info['local_text'].'","'.$info['local_type'].'","'.$arrival.'","'.$departure.'");');
+        $query = $this->db->query('INSERT INTO '.WIW_TABLE_PREFIX.'locals (id, title, city, country, flag, latitude, longitude, url, image, text, type, arrival, departure) VALUES (NULL,"'.$info['local_title'].'","'.$info['local_city'].'","'.$info['local_country'].'","'.$info['local_flag'].'","'.$info['local_latitude'].'","'.$info['local_longitude'].'","'.$info['local_url'].'","'.$info['local_image'].'","'.$info['local_text'].'","'.$info['local_type'].'","'.$arrival.'","'.$departure.'");');
         
         return $query;
     }
@@ -73,6 +73,7 @@ class WIWWIWB_Model_Admin {
         $arrival = (is_null($info['local_arrival']))?NULL:$this->control_util->change_date_to_db($info['local_arrival']);
         $departure = (is_null($info['local_departure']))?NULL:$this->control_util->change_date_to_db($info['local_departure']);  
         return $this->db->query('UPDATE '.WIW_TABLE_PREFIX.'locals SET city = "'.$info['local_city'].'",
+                                                                        title = "'.$info['local_title'].'",
                                                                         country = "'.$info['local_country'].'",
                                                                         flag = "'.$info['local_flag'].'",
                                                                         latitude = "'.$info['local_latitude'].'",
