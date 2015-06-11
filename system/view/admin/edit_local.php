@@ -30,10 +30,6 @@
         <HR>
         <table class="wiw_table">
             <tr valign="top">
-                <th scope="row" class="w200 text-left"><span class="wiw_label"><?php _e('Title',WIW_TRANSLATE); ?>:</span></th>
-                <td colspan="3"><input type="text" id="title" name="title" value=""  class="w100p wiw_input_text"/></td>
-            </tr>
-            <tr valign="top">
                 <th scope="row" class="w200 text-left"><span class="wiw_label"><?php _e('City',WIW_TRANSLATE); ?>:</span></th>
                 <td colspan="3"><input type="text" id="city" name="city" value="<?php echo $local->city; ?>"  class="w100p wiw_input_text"/></td>
             </tr>

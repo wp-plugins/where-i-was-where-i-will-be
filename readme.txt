@@ -3,7 +3,7 @@ Contributors: mcnardelli
 Tags: maps, google maps, places, travel
 Requires at least: 4.0
 Tested up to: 4.2.2
-Stable tag: 1.0.7
+Stable tag: 1.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -38,9 +38,6 @@ You can show place for time (when you arrived at the place and when you left ). 
 8. Function Cluster Markers
 
 == Changelog ==
-= 1.0.7 =
-* Included option to include a title on a local
-
 = 1.0.6 =
 * Added option to disable wheel scroll on map
 * Option to choose the coordinate where map will start
