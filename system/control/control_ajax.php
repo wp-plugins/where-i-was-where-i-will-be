@@ -4,6 +4,7 @@ class WIWWIWB_Ajax {
     public $model_info;
     public $control_manage;
     public $control_util;
+    public $control_form;
 	function __construct() {
         global $wpdb;
         if (!defined('WIW_TABLE_PREFIX')) define('WIW_TABLE_PREFIX', $wpdb->prefix.'wiw_');
@@ -16,12 +17,16 @@ class WIWWIWB_Ajax {
         
         include_once (WIW_DIR_CONTROL.'util.php');
         $this->control_util = new WIWWIWB_Util();
+		
+		include_once (WIW_DIR_CONTROL.'form.php');
+        $this->control_form = new WIWWIWB_Form();
     }
     
     function wiw_result_show_types () {
     
         if (!isset($_POST['nonce']) && !wp_verify_nonce($_POST['nonce'], 'wiw_nonce')) die('Permissions check failed!');
     ?>
+		<div id="wiw_get_standard_text" style="display: none;"><?php echo get_option('wiw_standard_text'); ?></div>
         <table class="wiw_table">
             <tr valign="middle" class="wiw_row_title">
                 <th class="w50 text-center"><?php _e('Id',WIW_TRANSLATE);?></th>
@@ -41,6 +46,18 @@ class WIWWIWB_Ajax {
                             <td class="text-left">
                                 <div id="wiw_type_name<?php echo $type->id; ?>"><?php echo $type->name; ?></div>
                                 <input type="hidden" id="wiw_type_name_hidden<?php echo $type->id; ?>" value="<?php echo $type->name; ?>">
+								<div id="wiw_type_text<?php echo $type->id; ?>" style="display: none;" class="w100p">
+									<table class="form-table">
+										<tr valign="top">
+											<th scope="row" class="w200 text-left">
+												<div class="w100p"><span class="wiw_label"><?php _e('Text',WIW_TRANSLATE);?>:</span></div>
+												<div class="w100p margintop10"><?php echo $this->control_form->insert_replaceable_text('replaceable_text'.$type->id, $type->id, 'w100p', 'w100p replaceable_btn') ; ?></div>
+												<div class="w100p margintop10"><input type="button" class="w100p button load_standard_text" id="<?php echo $type->id; ?>" value="<?php _e('Load Standard Text',WIW_TRANSLATE); ?>" /></div>
+											</th>
+											<td colspan="3"><textarea class="wiw_textarea" name="type_text<?php echo $type->id; ?>" id="type_text<?php echo $type->id; ?>"><?php echo $type->text; ?></textarea></td>
+										</tr>
+									</table>
+								</div>
                             </td>
                             <td class="text-center">
                                 <div id="type_pin_preview<?php echo $type->id; ?>" class="type_pin_preview text-center w100p">
@@ -112,6 +129,15 @@ class WIWWIWB_Ajax {
                 var id = jQuery(this).attr('id');
                 ajax_delete_type('#show_ajax' + id, id);
             });
+			jQuery(".replaceable_btn").click(function () {
+				var id = jQuery(this).attr('id');
+				return_replaceable_text('type_text' + id, 'replaceable_text' + id);
+			});
+			
+			jQuery(".load_standard_text").click(function () {
+				var id = jQuery(this).attr('id');
+				jQuery('#type_text' + id).val(jQuery('#wiw_get_standard_text').html());
+			});
         </script>        
     <?php
         die();

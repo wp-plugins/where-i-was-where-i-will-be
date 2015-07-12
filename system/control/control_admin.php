@@ -5,7 +5,7 @@ class WIWWIWB_Admin {
 		add_action('admin_init', array($this,'init_settings')); //Call register settings function
         add_action('admin_init', array($this, 'wiwwiwb_button')); //Insert Button on Page/Post
         add_action('admin_footer',array($this,'wiwwiwb_div')); //To be used on script.js
-        
+		
         add_action( 'init', array($this, 'plugin_translate') ); //Translate
     
         $this->load_ajax(); //Call Actions to use Ajax
@@ -54,10 +54,7 @@ class WIWWIWB_Admin {
 		
 		//Register Initial Settings
 		$settings = array('wiw_standard_type','wiw_standard_text','wiw_google_api','wiw_load_google_api','wiw_drop_table');
-		$section = array('wiw_settings',
-				      'Settings',
-				      'wiw_settings_section_text',
-				      'wiwwiwb');
+		$section = array('wiw_settings','Settings','wiw_settings_section_text','wiwwiwb');
 		$this->register_settings($settings,$section);
     }
 	
@@ -159,7 +156,6 @@ class WIWWIWB_Admin {
 		load_textdomain( $domain, WIW_DIR . '/language' . '/'. $domain . '-' . get_locale() . '.mo' );
         load_plugin_textdomain( $domain, false, WIW_DIR.'language/');
     }
-
 }
 
 ?>

@@ -99,6 +99,8 @@ function btn_edit_type(id) {
     var name = '<input id="type_name' + id + '" name="type_name' + id + '" value="' + old_name + '" class="w100p wiw_input_text"/>';
     jQuery("#wiw_type_name" + id).html(name);
     jQuery("input[name='type_custom_pin" + id + "']").css('display','block');
+    jQuery("input[name='type_text" + id + "']").css('display','block');
+    jQuery("#wiw_type_text" + id).css('display','block');
     jQuery("#action" + id).css('display','none');
     jQuery("#action_delete" + id).css('display','none');
     jQuery("#action_edit" + id).css('display','block');
@@ -110,6 +112,7 @@ function btn_edit_cancel_type(id) {
     jQuery("#wiw_type_name" + id).html(old_name);
     jQuery("#type_pin_preview" + id).html('<img src="' + old_pin + '" class="wiw_admin_pin">');
     jQuery("#action" + id).css('display','block');
+    jQuery("#wiw_type_text" + id).css('display','none');
     jQuery("#action_edit" + id).css('display','none');
     jQuery("#action_delete" + id).css('display','none');
     jQuery("input[name='type_custom_pin" + id + "']").css('display','none');

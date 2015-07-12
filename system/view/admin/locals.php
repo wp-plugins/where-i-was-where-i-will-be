@@ -8,6 +8,7 @@
         <table class="wiw_table">
             <tr valign="middle" class="wiw_row_title">
                 <th class="w50 text-center"><?php _e('Id',WIW_TRANSLATE); ?></th>
+				<th class="text-left"><?php _e('Title',WIW_TRANSLATE); ?></th>
                 <th class="text-left"><?php _e('City',WIW_TRANSLATE); ?></th>
                 <th class="text-left"><?php _e('Country',WIW_TRANSLATE); ?></th>
                 <th class="w200 text-left"><?php _e('Type',WIW_TRANSLATE); ?></th>
@@ -15,7 +16,7 @@
                 <th class="w200 text-center"><?php _e('Action',WIW_TRANSLATE); ?></th>
             </tr>
             <?php
-                $all_locals = $model_info->get_all_locals('ORDER BY city');
+                $all_locals = $model_info->get_all_locals('ORDER BY country ASC, city ASC, title ASC ');
                 $i = 0;
                 foreach ($all_locals as $local) {
                     $i++;
@@ -26,6 +27,7 @@
             ?>
                 <tr valign="middle" class="wiw_row_<?php echo ($i % 2); ?>" id="wiw_main_row_<?php echo $local->id; ?>">
                     <td class="w50 text-center"><?php echo $local->id; ?></td>
+					<td class="text-left"><?php echo $local->title; ?></td>
                     <td class="text-left"><?php echo $local->city; ?></td>
                     <td class="text-left"><?php echo $country; ?></td>
                     <td class="w200 text-left"><img src="<?php echo $type[0]->pin; ?>" class="wiw_admin_pin"> <?php echo $type[0]->name; ?></td>

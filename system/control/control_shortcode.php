@@ -39,7 +39,8 @@ class WIWWIWB_Shortcode {
             'center_button_position' => 'BOTTOM_CENTER',
 			'cluster' => false,
 			'scroll' => true,
-			'show_coord' => ''
+			'show_coord' => '',
+			'use_type_text' => false
         ), $atts);
         
         //Attributes to Generate WHERE
@@ -58,6 +59,7 @@ class WIWWIWB_Shortcode {
         $height = $this->check_dimension($att['height']);
         $cluster = (($att['cluster'] === false) || ($att['cluster']) === "false")?false:true;
 		$scroll = (($att['scroll'] === true) || ($att['scroll']) === "true")?true:false;
+		$use_type_text = (($att['use_type_text'] === true) || ($att['use_type_text']) === "true")?true:false;
 				
         $atts = array('class' => $att['class'],
                       'map_id' => $att['map_id'],
@@ -79,7 +81,8 @@ class WIWWIWB_Shortcode {
                       'center_button_position' => $att['center_button_position'],
 					  'cluster' => $cluster,
 					  'scroll' => $scroll,
-					  'show_coord' => $att['show_coord']);
+					  'show_coord' => $att['show_coord'],
+					  'use_type_text' => $use_type_text);
         
         return $this->generate_map($sql_where, $atts);
     }
@@ -161,6 +164,10 @@ class WIWWIWB_Shortcode {
             }
             array_push($array_index,'%'.$index.'%');
             array_push($array_value,$value);
+			
+			//Change single quote to code (avoid conflict in js)
+            array_push($array_index,'\'');
+            array_push($array_value,'&#39;');
         }
     
         $new_text = str_replace($array_index, $array_value, $this->control_util->make_single_line($text));

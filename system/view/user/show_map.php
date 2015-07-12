@@ -20,20 +20,26 @@
         
       //Start Marker Clusterer
       var markerClusterer<?php echo $map_id; ?> = null;
-      var map = null;
+      var map<?php echo $map_id; ?> = null;
     
     // Define your locations: HTML content for the info window, latitude, longitude
-    var locations = [
+    var locations<?php echo $map_id; ?> = [
 <?php
     foreach ($locals as $local) {
         $local = $control_shortcode->include_days_nigths($local);
         $local = $control_shortcode->adjust_days($local);
         $comma = ($local === $locals[count($locals)-1])?'':',';
-        echo "['".$control_shortcode->replace_text($local->text, $local)."', {$local->latitude}, {$local->longitude}]".$comma.PHP_EOL;
+        
+        if ($use_type_text) {
+            $pin = $model_info->get_type($local->type);
+            $text = $pin[0]->text;
+        } else $text = $local->text;
+        
+        echo "['".$control_shortcode->replace_text($text, $local)."', {$local->latitude}, {$local->longitude}]".$comma.PHP_EOL;
     }
 ?>
     ];
-    
+    console.log('use type text: <?php echo $use_type_text;?>');
     // Setup the different icons
     var icons = [   
 <?php
@@ -51,7 +57,7 @@
     ];
     var icons_length = icons.length;
 
-    var map = new google.maps.Map(document.getElementById('<?php echo $map_id; ?>'), {
+    var map<?php echo $map_id; ?> = new google.maps.Map(document.getElementById('<?php echo $map_id; ?>'), {
         zoom: <?php echo ($zoom == 'AUTO')?'10':$zoom; ?>,
         center: new google.maps.LatLng(<?php echo $coord; ?>),
         mapTypeId: google.maps.MapTypeId.<?php echo $map_type; ?>,
@@ -129,10 +135,10 @@
     var iconCounter = 0;
     
     // Add the markers and infowindows to the map
-    for (var i = 0; i < locations.length; i++) {  
+    for (var i = 0; i < locations<?php echo $map_id; ?>.length; i++) {  
         marker = new google.maps.Marker({
-            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-            map: map,
+            position: new google.maps.LatLng(locations<?php echo $map_id; ?>[i][1], locations<?php echo $map_id; ?>[i][2]),
+            map: map<?php echo $map_id; ?>,
             icon : icons[iconCounter]
         });
     
@@ -140,9 +146,9 @@
         
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
             return function() {
-                if (locations[i][0].length) {
-                    infowindow.setContent(locations[i][0]);
-                    infowindow.open(map, marker);
+                if (locations<?php echo $map_id; ?>[i][0].length) {
+                    infowindow.setContent(locations<?php echo $map_id; ?>[i][0]);
+                    infowindow.open(map<?php echo $map_id; ?>, marker);
                 }
             }
         }) (marker, i));
@@ -150,7 +156,7 @@
     }
     
     <?php if ($cluster) { ?>
-    markerClusterer<?php echo $map_id; ?> = new MarkerClusterer(map, markers, {
+    markerClusterer<?php echo $map_id; ?> = new MarkerClusterer(map<?php echo $map_id; ?>, markers, {
         maxZoom: <?php echo ($zoom == 'AUTO')?'10':$zoom; ?>,
         gridSize: 40
     });
@@ -160,10 +166,10 @@
         if ($center_button == 'ENABLED') {
     ?>
     var center_button_div = document.createElement('div');
-    var center_button1 = new center_button(center_button_div, map);
+    var center_button1 = new center_button(center_button_div, map<?php echo $map_id; ?>);
   
     center_button_div.index = 1;
-    map.controls[google.maps.ControlPosition.<?php echo $center_button_position; ?>].push(center_button_div);
+    map<?php echo $map_id; ?>.controls[google.maps.ControlPosition.<?php echo $center_button_position; ?>].push(center_button_div);
     <?php
         }
     ?>
@@ -183,7 +189,7 @@
             bounds.extend(marker.position);
         });
         //  Fit these bounds to the map
-        map.fitBounds(bounds);
+        map<?php echo $map_id; ?>.fitBounds(bounds);
     }
     
     function center_button(controlDiv, map) {

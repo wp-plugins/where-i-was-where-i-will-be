@@ -46,6 +46,14 @@
                     </table>
                 </div>
             </div>
+			<div class="w100p pull-left">
+				<div class="wiw_fail"><?php _e('',WIW_TRANSLATE); ?>
+				<?php _e('If you have any issue or idea to improve this plugin, please contact me',WIW_TRANSLATE); ?>:<BR>
+				<?php _e('E-mail',WIW_TRANSLATE); ?>: <a href="mailto:wiwwiwb@carnou.com" target="_blank">wiwwiwb@carnou.com</a> <?php _e('or',WIW_TRANSLATE); ?> <?php _e('WP Forum',WIW_TRANSLATE); ?>: <a href="https://wordpress.org/support/plugin/where-i-was-where-i-will-be" target="_blank">https://wordpress.org/support/plugin/where-i-was-where-i-will-be</a> (<?php _e('better',WIW_TRANSLATE); ?>)<BR>
+<BR>
+<?php _e('Also, if you could rate this plugin, I\'d appreciate',WIW_TRANSLATE); ?>: <a href="https://wordpress.org/support/view/plugin-reviews/where-i-was-where-i-will-be">https://wordpress.org/support/view/plugin-reviews/where-i-was-where-i-will-be</a>
+				</div>
+			</div>
             <div class="wiw_space20"></div>
             <div class="wiw_space20"></div>
             <?php submit_button(); ?>

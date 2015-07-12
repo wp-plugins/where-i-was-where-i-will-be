@@ -90,6 +90,8 @@
 }
 
 .type_pin_preview, .type_new_pin_preview, .wiw_admin_pin, .flag_preview {max-width:32px; max-height:32px;}
+.type_new_pin_preview {float: left; margin-right: 10px;}
+.type_pin_preview {margin: auto; margin-bottom: 10px;}
 .image_preview {max-width:200px; max-height:200px;}
 
 /**

@@ -34,19 +34,19 @@ function ajax_add_type(div) {
         action: 'wiw_add_type',
         nonce: wiw_vars.wiw_nonce,
         type_name: jQuery("#type_new_name").val(),
+        type_text: jQuery("#type_new_text").val(),
         type_pin: jQuery("#type_new_pin").val()
-    };
-    
+    }
     jQuery.post(ajaxurl, data, function (response) {
         new_name = jQuery("#type_new_name").val();
         new_pin = jQuery("#type_new_pin").val();
         if (new_name.length > 3 && new_pin.length > 3) {
             ajax_show_types('#show_types_ajax');
             jQuery("#type_new_name").val('');
+            jQuery("#type_new_text").val('');
         }
         jQuery(div).html(response);
     });
-    
     return false;
 }
 
@@ -58,6 +58,7 @@ function ajax_edit_type(div, id) {
         nonce: wiw_vars.wiw_nonce,
         type_id: id,
         type_name: jQuery("#type_name" + id).val(),
+        type_text: jQuery("#type_text" + id).val(),
         type_pin: jQuery("#type_pin" + id).val()
     };
     
@@ -137,6 +138,7 @@ function ajax_add_local(div) {
         action: 'wiw_add_local',
         nonce: wiw_vars.wiw_nonce,
         local_city: jQuery("#city").val(),
+        local_title: jQuery("#title").val(),
         local_country: jQuery("#country").val(),
         local_flag: jQuery("#flag").val(),
         local_latitude: jQuery("#latitude").val(),
@@ -161,6 +163,7 @@ function ajax_edit_local(div, id) {
         nonce: wiw_vars.wiw_nonce,
         local_id: id,
         local_city: jQuery("#city").val(),
+        local_title: jQuery("#title").val(),
         local_country: jQuery("#country").val(),
         local_flag: jQuery("#flag").val(),
         local_latitude: jQuery("#latitude").val(),
