@@ -35,7 +35,7 @@ class WIWWIWB_Model_Create {
 				) {$this->charset_collate};";
 		dbDelta($sql);
 		
-		if (!$this->run_query("SELECT text FROM {$table_name}")) { //Include fields in older version
+		if (!$this->run_query("SELECT title FROM {$table_name}")) { //Include fields in older version
 			$sql_update = "ALTER TABLE {$table_name} ADD title VARCHAR(256) NULL AFTER id;";
 			$this->run_query($sql_update);
 		}

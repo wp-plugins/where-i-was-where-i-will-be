@@ -3,7 +3,7 @@ Contributors: mcnardelli
 Tags: maps, google maps, places, travel
 Requires at least: 4.0
 Tested up to: 4.2.2
-Stable tag: 1.0.8
+Stable tag: 1.0.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -38,6 +38,9 @@ You can show place for time (when you arrived at the place and when you left ). 
 8. Function Cluster Markers
 
 == Changelog ==
+= 1.0.9 =
+* Fixed bug with Title field
+
 = 1.0.8 =
 * Included Text on Types (Now you can change all texts at once)
 * Included option to show text from Type or from Local
